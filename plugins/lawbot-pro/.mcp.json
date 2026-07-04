@@ -2,9 +2,9 @@
   "mcpServers": {
     "lawbot": {
       "type": "http",
-      "url": "${LAWBOT_API_URL:-https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/mcp-server/mcp}",
+      "url": "https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/mcp-server/mcp",
       "headers": {
-        "Authorization": "Bearer ${user_config.license_key}"
+        "Authorization": "Bearer ${user_config.license_key:-}"
       },
       "timeout": 120000,
       "alwaysLoad": true
