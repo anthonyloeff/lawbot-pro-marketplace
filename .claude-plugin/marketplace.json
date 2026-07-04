@@ -1,0 +1,12 @@
+{
+  "name": "litic",
+  "owner": { "name": "Litic.ai", "email": "anthony@litic.ai", "url": "https://litic.ai" },
+  "plugins": [
+    {
+      "name": "lawbot-pro",
+      "source": "./plugins/lawbot-pro",
+      "description": "Nederlandstalige juridische onderzoeksassistent voor advocaten: jurisprudentie, wetten (actueel én historisch), wetsgeschiedenis, tuchtrecht, EU-recht — rechtstreeks uit de officiële bronnen, altijd met verifieerbare links. Abonnement vereist (14 dagen gratis proef via portal.litic.ai).",
+      "category": "legal"
+    }
+  ]
+}
