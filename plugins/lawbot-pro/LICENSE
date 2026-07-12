@@ -1,9 +1,24 @@
-LawBot Pro — © Litic.ai
+LawBot Pro — © Litic.ai. Alle rechten voorbehouden.
 
-De broncode van deze plugin (skills, commands, configuratie) is openbaar zichtbaar
-zodat gebruikers kunnen controleren wat de plugin doet. Alle rechten voorbehouden:
-kopiëren, hergebruiken of doorverkopen van deze bestanden of van de bijbehorende
-LawBot Pro-dienst is niet toegestaan zonder schriftelijke toestemming van Litic.ai.
+Deze broncode (skills, commands, configuratie) is uitsluitend openbaar zichtbaar zodat
+gebruikers en platforms kunnen controleren wat de plugin doet ("source-available", GEEN
+open source). Er wordt geen enkele licentie verleend om deze code te gebruiken buiten de
+officiële LawBot Pro-dienst van Litic.ai.
 
-De plugin functioneert uitsluitend met een geldige LawBot Pro-licentie
-(https://portal.litic.ai). Op het gebruik zijn de Litic.ai-voorwaarden van toepassing.
+Zonder voorafgaande schriftelijke toestemming van Litic.ai is het niet toegestaan om deze
+repository of enig deel daarvan:
+  - te forken, te kopiëren of te klonen voor hergebruik, te herdistribueren of te publiceren;
+  - te wijzigen of er afgeleide werken van te maken;
+  - te gebruiken om een concurrerende of vergelijkbare dienst aan te bieden;
+  - door te verkopen of anderszins commercieel te exploiteren.
+
+Wél toegestaan: de plugin bekijken ter controle en installeren via de officiële marketplace,
+met een geldige LawBot Pro-licentie (https://portal.litic.ai). De plugin functioneert
+uitsluitend met zo'n licentie en de bijbehorende Litic.ai-backend; een kopie zonder die
+licentie en backend heeft geen functie. Op het gebruik zijn de algemene voorwaarden van
+Litic.ai van toepassing.
+
+De merknamen "LawBot", "LawBot Pro", "LawBot Business" en "Litic", en de bijbehorende
+huisstijl, zijn eigendom van Litic.ai en mogen niet zonder toestemming worden gebruikt.
+
+Vragen of verzoeken om toestemming: anthony@litic.ai.

@@ -1,7 +1,7 @@
 {
   "name": "lawbot-pro",
   "displayName": "LawBot Pro",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Juridische onderzoeksassistent (NL): jurisprudentie (J:), wetten (W:), uitspraakanalyses (S:), rechterprofielen (R:), interviewmodus (V:), documentanalyse en het opstellen van stukken — op officiële bronnen, met verifieerbare links. Vereist een LawBot Pro-licentie van Litic.ai (14 dagen gratis proef).",
   "author": { "name": "Litic.ai", "email": "anthony@litic.ai", "url": "https://litic.ai" },
   "homepage": "https://portal.litic.ai",
