@@ -1,13 +1,24 @@
 {
   "name": "lawbot-pro",
   "displayName": "LawBot Pro",
-  "version": "0.9.5",
+  "version": "0.10.0",
   "description": "Juridische onderzoeksassistent (NL): jurisprudentie (J:), wetten (W:), uitspraakanalyses (S:), rechterprofielen (R:), interviewmodus (V:), documentanalyse en het opstellen van stukken — op officiële bronnen, met verifieerbare links. Vereist een LawBot Pro-licentie van Litic.ai (14 dagen gratis proef).",
-  "author": { "name": "Litic.ai", "email": "anthony@litic.ai", "url": "https://litic.ai" },
+  "author": {
+    "name": "Litic.ai",
+    "email": "anthony@litic.ai",
+    "url": "https://litic.ai"
+  },
   "homepage": "https://portal.litic.ai",
   "repository": "https://github.com/anthonyloeff/lawbot-pro-marketplace",
   "license": "SEE LICENSE IN LICENSE",
-  "keywords": ["juridisch", "rechtspraak", "wetten", "ECLI", "advocatuur", "nederlands-recht"],
+  "keywords": [
+    "juridisch",
+    "rechtspraak",
+    "wetten",
+    "ECLI",
+    "advocatuur",
+    "nederlands-recht"
+  ],
   "mcpServers": "./.mcp.json",
   "userConfig": {
     "license_key": {

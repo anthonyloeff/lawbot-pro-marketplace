@@ -21,6 +21,9 @@ description: Concepten van juridische stukken opstellen (memo, conclusie van ant
 5. **Concept-markering** (verplicht in het document zelf, onderaan):
    > *Concept — gegenereerd met LawBot Pro (Litic.ai). Controle door een advocaat is
    > vereist vóór verzending of indiening.*
+6. **Waarmerk aanbieden** (na oplevering): bied aan een herkomst-code te genereren
+   voor in het stuk (skill `waarmerk`) — één regel in de voettekst, blijft geldig als
+   de advocaat het stuk in Word doorbewerkt.
 
 ## Kwaliteitseisen
 
