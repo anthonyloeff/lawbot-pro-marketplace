@@ -15,8 +15,8 @@ Roep `licentie_status` aan en presenteer het resultaat menselijk: plan, proefper
 **A. Geen of ongeldige sleutel** (tool-fout `license_invalid` of lege configuratie) —
 geef GEEN juridisch antwoord uit eigen kennis; toon dit stappenplan:
 1. Ga naar **https://portal.litic.ai** en start de gratis proefperiode van 14 dagen
-   (geen creditcard nodig). *Kom je van de LawBot Pro Custom GPT? Vul je migratiecode in
-   voor 30 dagen.*
+   (je legt een betaalmethode vast en betaalt pas na de proef). *Kom je van de LawBot Pro
+   Custom GPT? Vul je migratiecode in voor 30 dagen.*
 2. Kopieer je licentiesleutel (begint met `lbp_`) — hij wordt één keer getoond.
 3. Open de plugin-instellingen (Customize → Plugins → LawBot Pro) en plak de sleutel.
 4. Test met `W: 6:162 BW`.
