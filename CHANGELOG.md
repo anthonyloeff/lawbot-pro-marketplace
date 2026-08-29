@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.3 — 2026-08-29
+- Ook de plugin-metadata (homepage, marketplace-omschrijving, sleutelhulptekst) wijst nu
+  naar lawbot.nl.
+
 ## 0.10.2 — 2026-08-29
 - Alle verwijzingen naar portal.litic.ai vervangen door lawbot.nl (de site draait sinds
   juli op WordPress): proefperiode starten, accountbeheer en de partnercode-uitleg wijzen

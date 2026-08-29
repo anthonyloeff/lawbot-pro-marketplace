@@ -5,7 +5,7 @@
     {
       "name": "lawbot-pro",
       "source": "./plugins/lawbot-pro",
-      "description": "Nederlandstalige juridische onderzoeksassistent voor advocaten: jurisprudentie, wetten (actueel én historisch), wetsgeschiedenis, tuchtrecht, EU-recht — rechtstreeks uit de officiële bronnen, altijd met verifieerbare links. Abonnement vereist (14 dagen gratis proef via portal.litic.ai).",
+      "description": "Nederlandstalige juridische onderzoeksassistent voor advocaten: jurisprudentie, wetten (actueel én historisch), wetsgeschiedenis, tuchtrecht, EU-recht — rechtstreeks uit de officiële bronnen, altijd met verifieerbare links. Abonnement vereist (14 dagen gratis proef via lawbot.nl).",
       "category": "legal"
     }
   ]
