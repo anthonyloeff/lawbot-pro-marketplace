@@ -8,13 +8,13 @@ description: Onboarding, licentie en probleemdiagnose van LawBot Pro. MOET actie
 ## Statuscheck
 
 Roep `licentie_status` aan en presenteer het resultaat menselijk: plan, proefperiode
-(dagen resterend), verbruik vandaag, en de beheerlink (https://portal.litic.ai/account.html).
+(dagen resterend), verbruik vandaag, en de beheerlink (https://lawbot.nl/account).
 
 ## Scenario's
 
 **A. Geen of ongeldige sleutel** (tool-fout `license_invalid` of lege configuratie) —
 geef GEEN juridisch antwoord uit eigen kennis; toon dit stappenplan:
-1. Ga naar **https://portal.litic.ai** en start de gratis proefperiode van 14 dagen
+1. Ga naar **https://lawbot.nl** en start de gratis proefperiode van 14 dagen
    (je legt een betaalmethode vast en betaalt pas na de proef). *Kom je van de LawBot Pro
    Custom GPT? Vul je migratiecode in voor 30 dagen.*
 2. Kopieer je licentiesleutel (begint met `lbp_`) — hij wordt één keer getoond.
@@ -23,7 +23,7 @@ geef GEEN juridisch antwoord uit eigen kennis; toon dit stappenplan:
 
 **B. Proefperiode verlopen / betaling mislukt** (`license_expired` / `license_past_due`):
 gegevens blijven bewaard; verlengen of betaalmethode bijwerken kan via
-https://portal.litic.ai/account.html — daarna werkt alles direct weer, zonder herinstallatie.
+https://lawbot.nl/account — daarna werkt alles direct weer, zonder herinstallatie.
 
 **C. Migratiecode:** de code wordt verzilverd op de portal (bij het starten van de proef),
 niet in de plugin. Verwijs vriendelijk door.

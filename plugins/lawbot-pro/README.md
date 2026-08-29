@@ -9,7 +9,7 @@ Claude nooit.
 ## Installatie (3 minuten)
 
 1. **Licentie:** start je gratis proefperiode van 14 dagen op
-   **[portal.litic.ai](https://portal.litic.ai)** (je legt een betaalmethode vast en betaalt
+   **[lawbot.nl](https://lawbot.nl)** (je legt een betaalmethode vast en betaalt
    pas na de proef; met migratiecode van de Custom GPT: 30 dagen). Kopieer je sleutel (`lbp_…`).
 2. **Plugin:** in Claude → *Customize → Plugins* (tabblad Cowork) → **+** →
    *Add marketplace* → *Add from a repository* → `anthonyloeff/lawbot-pro-marketplace`
@@ -41,4 +41,4 @@ de Litic.ai-backend.
 
 ## Support
 
-support@litic.ai · [portal.litic.ai](https://portal.litic.ai) · Litic.ai — Antwerpen/Eindhoven
+support@litic.ai · [lawbot.nl](https://lawbot.nl) · Litic.ai — Antwerpen/Eindhoven

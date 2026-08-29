@@ -5,7 +5,7 @@ Installatie in Claude: **Customize → Plugins** (tabblad Cowork) → **+** →
 
 | Plugin | Omschrijving |
 |---|---|
-| **[LawBot Pro](plugins/lawbot-pro/)** | Juridische onderzoeksassistent voor Nederlandse advocaten — jurisprudentie, wetten, wetsgeschiedenis, tuchtrecht en EU-recht uit officiële bronnen, met verifieerbare links. [Start je gratis proefperiode →](https://portal.litic.ai) |
+| **[LawBot Pro](plugins/lawbot-pro/)** | Juridische onderzoeksassistent voor Nederlandse advocaten — jurisprudentie, wetten, wetsgeschiedenis, tuchtrecht en EU-recht uit officiële bronnen, met verifieerbare links. [Start je gratis proefperiode →](https://lawbot.nl) |
 
 ## Licentie
 

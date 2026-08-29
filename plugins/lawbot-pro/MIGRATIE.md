@@ -17,5 +17,5 @@
 
 **Verschillen om te weten:**
 - LawBot Pro draait nu als plugin binnen Claude; je hebt een Claude-abonnement (Pro/Team) nodig.
-- Je migratiecode verzilver je éénmalig op [portal.litic.ai](https://portal.litic.ai) — je krijgt dan 30 in plaats van 14 dagen proef.
+- Je migratiecode verzilver je éénmalig op [lawbot.nl](https://lawbot.nl) — je krijgt dan 30 in plaats van 14 dagen proef.
 - Je documenten verlaten Claude nooit; de server ziet alleen zoektermen. Dat was in de GPT-versie anders.

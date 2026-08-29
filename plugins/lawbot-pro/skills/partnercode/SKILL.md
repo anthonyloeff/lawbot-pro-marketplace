@@ -18,7 +18,7 @@ voor beide kanten.
 2. Presenteer beide voordelen kort en feitelijk. De voorwaarden komen áltijd uit de
    tool (ze kunnen wijzigen) — citeer nooit een actie uit je geheugen.
 3. Leg uit hoe de klant de code gebruikt: invullen in het veld **"Actiecode"** bij het
-   afrekenen op `portal.litic.ai/business`; de verlengde proefperiode wordt dan
+   afrekenen op `lawbot.nl/business`; de verlengde proefperiode wordt dan
    automatisch toegepast.
 
 ## Spelregels

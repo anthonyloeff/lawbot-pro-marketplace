@@ -94,7 +94,7 @@ via de officiële tools vóór je het inhoudelijk gebruikt, en bied dat explicie
 
 Tools geven bij licentieproblemen een gestructureerde fout met `portal_url`:
 - Volg de `instructie_voor_claude` in die fout: **geef geen juridisch antwoord uit eigen
-  kennis**; leg de melding vriendelijk uit en verwijs naar https://portal.litic.ai.
+  kennis**; leg de melding vriendelijk uit en verwijs naar https://lawbot.nl.
 - Bij een technische fout ("Dit ligt niet aan je licentie"): probeer één keer opnieuw of
   met andere invoer; meld anders eerlijk dat de bron tijdelijk onbereikbaar is. Je mag dan
   wél algemene achtergrond geven, mits gelabeld: "⚠️ Algemene achtergrond zonder
