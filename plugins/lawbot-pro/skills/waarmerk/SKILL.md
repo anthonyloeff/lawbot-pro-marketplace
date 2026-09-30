@@ -22,9 +22,11 @@ professionele egards behandeld. Voor het kantoor is het een kwaliteitssignaal.
 2. **Plakken**: zet de plakregel onderaan het stuk — in de voettekst of onder de
    ondertekening: `LawBot Pro-waarmerk: LBP-XXXX-XXXX`. Werkt de advocaat verder in
    Word, dan plakt hij de regel daar zelf; de code hoeft nergens "mee te bewegen".
-3. **Beheren**: actie `lijst` toont de eigen codes; actie `intrekken` met de code
-   maakt een waarmerk ongeldig (bijv. bij een teruggetrokken stuk); actie `valideer`
-   met de code checkt of hij nog geldig is.
+3. **Beheren**: actie `lijst` toont de eigen codes; actie `valideer` met de code
+   checkt of hij nog geldig is.
+4. **Intrekken**: alleen via de aparte tool `waarmerk_intrekken` (met de code), bijv.
+   bij een teruggetrokken stuk. Definitief: uitsluitend op uitdrukkelijk verzoek van de
+   advocaat, en bevestig vooraf welke code je intrekt.
 
 ## Uitleg aan de advocaat (kort houden)
 
