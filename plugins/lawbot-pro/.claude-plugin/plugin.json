@@ -1,7 +1,7 @@
 {
   "name": "lawbot-pro",
   "displayName": "LawBot Pro",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "Juridische onderzoeksassistent (NL): jurisprudentie (J:), wetten (W:), uitspraakanalyses (S:), rechterprofielen (R:), interviewmodus (V:), documentanalyse en het opstellen van stukken — op officiële bronnen, met verifieerbare links. Vereist een LawBot Pro-licentie van Litic.ai (14 dagen gratis proef).",
   "author": {
     "name": "Litic.ai",
@@ -24,7 +24,7 @@
     "license_key": {
       "type": "string",
       "title": "LawBot Pro licentiesleutel (alleen voor Claude Code CLI)",
-      "description": "Gebruik je LawBot Pro in Claude Code (terminal)? Plak dan hier je licentiesleutel (lbp_…) van https://lawbot.nl. Op claude.ai en in Cowork hoeft dit niet: daar verbind je de connector en log je in via de portal.",
+      "description": "Gebruik je LawBot Pro in Claude Code (terminal)? Plak dan hier je licentiesleutel (lbp_…) van https://lawbot.nl. In de Claude-app, Cowork en op claude.ai wordt dit veld niet gebruikt: voeg daar een custom connector toe en log in via LawBot (zie de README).",
       "sensitive": true,
       "required": false
     }

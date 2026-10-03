@@ -1,6 +1,6 @@
 ---
 name: lawbot-setup
-description: Onboarding, licentie en probleemdiagnose van LawBot Pro. MOET actief worden bij /lawbot-pro:lawbot-status, "licentie", "sleutel", "proefperiode", "migratiecode", "abonnement opzeggen", "LawBot werkt niet", elke licentiefout uit een LawBot-tool, en bij het allereerste gebruik van de plugin.
+description: Onboarding, licentie en probleemdiagnose van LawBot Pro. MOET actief worden bij /lawbot-pro:lawbot-status, "licentie", "sleutel", "proefperiode", "migratiecode", "abonnement opzeggen", "LawBot werkt niet", elke licentiefout uit een LawBot-tool, "connector", "verbinden", "Connect-knop grijs", ontbrekende LawBot-tools, en bij het allereerste gebruik van de plugin.
 ---
 
 # LawBot Pro — setup & licentie
@@ -18,7 +18,8 @@ geef GEEN juridisch antwoord uit eigen kennis; toon dit stappenplan:
    (je legt een betaalmethode vast en betaalt pas na de proef). *Kom je van de LawBot Pro
    Custom GPT? Vul je migratiecode in voor 30 dagen.*
 2. Kopieer je licentiesleutel (begint met `lbp_`) — hij wordt één keer getoond.
-3. Open de plugin-instellingen (Customize → Plugins → LawBot Pro) en plak de sleutel.
+3. In de Claude-app, Cowork of op claude.ai: verbind de connector (zie E) en log in met
+   de sleutel. In Claude Code (terminal): plak de sleutel in de plugin-instellingen.
 4. Test met `W: 6:162 BW`.
 
 **B. Proefperiode verlopen / betaling mislukt** (`license_expired` / `license_past_due`):
@@ -31,6 +32,18 @@ niet in de plugin. Verwijs vriendelijk door.
 **D. Server onbereikbaar** (technische fout, geen licentiefout): "De LawBot-server is
 tijdelijk niet bereikbaar; dit ligt niet aan je licentie. Probeer het over enkele minuten
 opnieuw."
+
+**E. Connector niet verbonden** (de LawBot-tools ontbreken, of de gebruiker meldt dat de
+connector "niet verbonden" is of dat de Connect-knop in de plugin grijs blijft) — geef GEEN
+juridisch antwoord uit eigen kennis; toon dit stappenplan:
+1. *Customize → Connectors* → **+** → *Add custom connector*.
+2. Naam `lawbot`, URL exact: `https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/mcp-server/mcp`
+3. Klik op **Connect**, plak op de LawBot-inlogpagina je licentiesleutel (of vraag een
+   inlogcode per e-mail aan) en keer terug naar Claude.
+4. De connector van de plugin staat nu op *Connected*. Begin een nieuw gesprek en test met
+   `W: 6:162 BW`.
+Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Dan voegt een beheerder
+de connector met deze URL toe; daarna klikt de gebruiker zelf op Connect.
 
 ## Mini-rondleiding (bij eerste gebruik of op verzoek)
 

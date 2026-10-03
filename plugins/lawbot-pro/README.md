@@ -6,7 +6,7 @@ tuchtrecht.overheid.nl en EUR-Lex — plus een eigen semantische index die dagel
 meegroeit. Elke bewering komt met een klikbare bronlink; je documenten verlaten
 Claude nooit.
 
-## Installatie (3 minuten)
+## Installatie (5 minuten)
 
 1. **Licentie:** start je gratis proefperiode van 14 dagen op
    **[lawbot.nl](https://lawbot.nl)** (je legt een betaalmethode vast en betaalt
@@ -14,10 +14,24 @@ Claude nooit.
 2. **Plugin:** in Claude → *Customize → Plugins* (tabblad Cowork) → **+** →
    *Add marketplace* → *Add from a repository* → `anthonyloeff/lawbot-pro-marketplace`
    → installeer **LawBot Pro**.
-   Of via Claude Code: `/plugin marketplace add anthonyloeff/lawbot-pro-marketplace`
-   gevolgd door `/plugin install lawbot-pro@litic`.
-3. **Sleutel:** bij het inschakelen vraagt Claude om je licentiesleutel — plak hem daar.
+3. **Connector verbinden:** in Claude → *Customize → Connectors* → **+** →
+   *Add custom connector*, met als naam `lawbot` en als URL (exact overnemen, de plugin
+   herkent de connector aan dit adres):
+
+   ```
+   https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/mcp-server/mcp
+   ```
+
+   Klik op **Connect**. Je komt op de inlogpagina van LawBot: plak je licentiesleutel
+   (of vraag een inlogcode per e-mail aan) en je keert terug naar Claude. In de plugin
+   staat de connector daarna op *Connected*.
+   *Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Vraag dan je
+   beheerder de connector met deze URL toe te voegen; daarna klik je zelf op Connect.*
 4. **Test:** typ `W: 6:162 BW`. Staat het artikel er binnen enkele seconden, dan werkt alles.
+
+**Claude Code (terminal):** `/plugin marketplace add anthonyloeff/lawbot-pro-marketplace`
+gevolgd door `/plugin install lawbot-pro@litic`, en plak je sleutel als Claude Code erom
+vraagt. Een custom connector is daar niet nodig.
 
 ## Commando's
 

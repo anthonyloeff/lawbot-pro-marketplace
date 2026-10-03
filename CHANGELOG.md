@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.11.3 — 2026-10-03
+- Installatie-instructies bijgewerkt: in de Claude-app, Cowork en op claude.ai verbind je de
+  LawBot-connector via *Customize → Connectors → Add custom connector* (README en de
+  setup-skill leiden je er stap voor stap doorheen).
+
+## 0.11.2 — 2026-10-03
+- Connector-adres terug naar het vertrouwde adres. 0.11.0 en 0.11.1 gebruikten een nieuw
+  adres waarop bestaande verbindingen niet aansloten.
+
+## 0.11.1 — 2026-09-30
+- Een waarmerk intrekken loopt via een eigen tool.
+
 ## 0.10.3 — 2026-08-29
 - Ook de plugin-metadata (homepage, marketplace-omschrijving, sleutelhulptekst) wijst nu
   naar lawbot.nl.
