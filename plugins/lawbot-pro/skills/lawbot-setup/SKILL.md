@@ -18,8 +18,8 @@ geef GEEN juridisch antwoord uit eigen kennis; toon dit stappenplan:
    (je legt een betaalmethode vast en betaalt pas na de proef). *Kom je van de LawBot Pro
    Custom GPT? Vul je migratiecode in voor 30 dagen.*
 2. Kopieer je licentiesleutel (begint met `lbp_`) — hij wordt één keer getoond.
-3. In de Claude-app, Cowork of op claude.ai: verbind de connector (zie E) en log in met
-   de sleutel. In Claude Code (terminal): plak de sleutel in de plugin-instellingen.
+3. Verbind de connector en log in met de sleutel (zie E). In Claude Code (terminal):
+   `/mcp` → `lawbot` → **Authenticate**.
 4. Test met `W: 6:162 BW`.
 
 **B. Proefperiode verlopen / betaling mislukt** (`license_expired` / `license_past_due`):
@@ -34,14 +34,15 @@ tijdelijk niet bereikbaar; dit ligt niet aan je licentie. Probeer het over enkel
 opnieuw."
 
 **E. Connector niet verbonden** (de LawBot-tools ontbreken, of de gebruiker meldt dat de
-connector "niet verbonden" is of dat de Connect-knop in de plugin grijs blijft) — geef GEEN
-juridisch antwoord uit eigen kennis; toon dit stappenplan:
-1. *Customize → Connectors* → **+** → *Add custom connector*.
-2. Naam `lawbot`, URL exact: `https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/mcp-server/mcp`
-3. Klik op **Connect**, plak op de LawBot-inlogpagina je licentiesleutel (of vraag een
-   inlogcode per e-mail aan) en keer terug naar Claude.
-4. De connector van de plugin staat nu op *Connected*. Begin een nieuw gesprek en test met
-   `W: 6:162 BW`.
+connector "niet verbonden" is) — geef GEEN juridisch antwoord uit eigen kennis; toon dit
+stappenplan:
+1. Open *Customize → Plugins → LawBot Pro → Connectors* en klik bij `lawbot` op **Connect**.
+2. Plak op de LawBot-inlogpagina je licentiesleutel (of vraag een inlogcode per e-mail aan)
+   en keer terug naar Claude.
+3. Begin een nieuw gesprek en test met `W: 6:162 BW`.
+Blijft Connect grijs of lukt het niet (bijv. een oudere versie van de plugin)? Werk de
+plugin bij, of voeg zelf een custom connector toe: *Customize → Connectors* → **+** →
+*Add custom connector*, naam `lawbot`, URL exact: `https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/mcp-server/mcp` → **Connect** → inloggen.
 Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Dan voegt een beheerder
 de connector met deze URL toe; daarna klikt de gebruiker zelf op Connect.
 

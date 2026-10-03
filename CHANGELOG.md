@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.0 — 2026-10-03
+- Verbinden met één klik: in de Claude-app, Cowork en op claude.ai klik je in de plugin bij de
+  connector op **Connect** en log je in met je licentiesleutel of een inlogcode per e-mail.
+  Een custom connector toevoegen is niet meer nodig (blijft werken als terugvaloptie).
+- Claude Code (terminal): inloggen via `/mcp` → `lawbot` → Authenticate in plaats van een
+  sleutelveld in de plugin-instellingen.
+
 ## 0.11.3 — 2026-10-03
 - Installatie-instructies bijgewerkt: in de Claude-app, Cowork en op claude.ai verbind je de
   LawBot-connector via *Customize → Connectors → Add custom connector* (README en de
