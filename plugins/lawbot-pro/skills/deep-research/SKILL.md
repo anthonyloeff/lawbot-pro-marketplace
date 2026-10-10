@@ -57,7 +57,7 @@ info = maak_rapport(spec, "klachtplicht-6-89-BW-2026-10-10.pdf")
 print(json.dumps(info, ensure_ascii=False))   # fonts "huisstijl" + logos true = volledige huisstijl; assets: skill | gedownload | onvolledig
 ```
 
-4. Zet het bestand in de werkmap van de gebruiker (bestandsnaam: korte titel plus datum) en noem het pad in het antwoord.
+4. Zet het bestand in de werkmap van de gebruiker (bestandsnaam: korte titel plus datum) en noem het pad in het antwoord. Is er geen map gekoppeld (je uitvoer staat dan alleen in de sandbox van de sessie, bijvoorbeeld onder `/mnt/user-data/outputs/`), bied het bestand dan als bijlage aan en zeg erbij dat de gebruiker met "Add folder" een map kan koppelen, zodat het rapport voortaan direct in die map op de computer landt.
 5. Meld wat `info` zegt: pagina's en of de huisstijl volledig is. Is `fonts` niet "huisstijl" of ontbreekt een logo, zeg dan letterlijk "huisstijl deels: terugvalfonts of logo ontbreekt" en noem de oorzaak uit `waarschuwingen`. Verzwijg nooit een terugval.
 
 Spec (alle tekst mag **vet**, *cursief*, [tekst](url) en [n] voor een noot bevatten):

@@ -38,7 +38,7 @@ from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
                                 CondPageBreak, Image)
 from reportlab.platypus.tableofcontents import TableOfContents
 
-SJABLOON_VERSIE = "2.1 (2026-10-10)"
+SJABLOON_VERSIE = "2.2 (2026-10-10)"
 ASSETS_URL = "https://raw.githubusercontent.com/anthonyloeff/lawbot-pro-marketplace/main/plugins/lawbot-pro/skills/deep-research/assets/"
 ASSET_BESTANDEN = ["fonts/PlusJakartaSans-Regular.ttf", "fonts/PlusJakartaSans-SemiBold.ttf", "fonts/PlusJakartaSans-Bold.ttf",
                    "fonts/PlusJakartaSans-Italic.ttf", "fonts/SourceSerif4-Regular.ttf", "fonts/SourceSerif4-It.ttf",
@@ -187,9 +187,9 @@ def maak_stijlen(F):
     S["kop1"] = ParagraphStyle("kop1", fontName=F["serif_sb"], fontSize=18, leading=22, textColor=K["groen_donker"],
                                spaceBefore=2, spaceAfter=8, keepWithNext=1)
     S["kop2"] = ParagraphStyle("kop2", fontName=F["sans_sb"], fontSize=11.5, leading=15, textColor=K["groen_donker"],
-                               spaceBefore=10, spaceAfter=4, keepWithNext=1)
+                               spaceBefore=10, spaceAfter=4)
     S["kop3"] = ParagraphStyle("kop3", fontName=F["sans_sb"], fontSize=9.5, leading=13, textColor=K["inkt_zacht"],
-                               spaceBefore=6, spaceAfter=2, keepWithNext=1)
+                               spaceBefore=6, spaceAfter=2)
     S["ondertitel"] = ParagraphStyle("ondertitel", fontName=F["serif_it"], fontSize=12, leading=16, textColor=K["inkt_zacht"], spaceAfter=10)
     S["citaat"] = ParagraphStyle("citaat", fontName=F["serif_it"], fontSize=10, leading=14.5, textColor=K["inkt"], spaceAfter=2)
     S["citaat_bron"] = ParagraphStyle("citaat_bron", fontName=F["sans"], fontSize=7.5, leading=10, textColor=K["inkt_zacht"])
@@ -341,6 +341,7 @@ class RapportDoc(BaseDocTemplate):
                          title=spec.get("titel", "LawBot Pro-rapport"), author="LawBot Pro (Litic)",
                          subject=spec.get("vorm", ""), creator=f"LawBot Pro rapportsjabloon {SJABLOON_VERSIE}", **kw)
         self.spec, self.F, self.S, self.assets_dir = spec, F, S, Path(assets_dir)
+        self.toc_niveaus = 2  # 2 = hoofdstukken en paragrafen; 1 = alleen hoofdstukken (wordt in maak_rapport gezet)
         self.logo_lawbot = self.assets_dir / "logo-lawbot.png"
         self.logo_litic_licht = self.assets_dir / "logo-litic-light.png"
         self.logo_litic_donker = self.assets_dir / "logo-litic-dark.png"
@@ -356,7 +357,8 @@ class RapportDoc(BaseDocTemplate):
             niveau, tekst, sleutel = toc
             self.canv.bookmarkPage(sleutel)
             self.canv.addOutlineEntry(tekst, sleutel, niveau, 0)
-            self.notify("TOCEntry", (niveau, tekst, self.page, sleutel))
+            if niveau < self.toc_niveaus:
+                self.notify("TOCEntry", (niveau, tekst, self.page, sleutel))
 
     def _label(self, c, x, y, tekst, kleur, size=7, spatie=1.0, rechts=False):
         tekst = tekst.upper()
@@ -478,6 +480,9 @@ class Bouwer:
             p._toc = (0, toc_tekst or (f"{nummer}  {tekst}" if nummer else tekst), self.sleutel())
             uit.append(p)
         else:
+            # Geen keepWithNext: een lange tabel na de kop zou anders in zijn geheel naar de volgende pagina
+            # verhuizen (halflege pagina). Wel minimaal 28 mm ruimte, zodat de kop niet onderaan verweesd staat.
+            uit.append(CondPageBreak(28 * mm))
             stijl = self.S["kop2"] if niveau == 1 else self.S["kop3"]
             volledig = f"{nummer}  {tekst}" if nummer else tekst
             p = Paragraph(par(volledig), stijl)
@@ -693,13 +698,24 @@ class Bouwer:
         return [Kaderlabel("Colofon", self.F["sans_sb"], K["oker"]), t]
 
 
-def bouw_story(spec, F, S, bouwer):
+def tel_paragrafen(spec):
+    """Aantal paragraafkoppen (niveau 1) plus bronnengroepen: bepaalt of de inhoudsopgave paragrafen toont."""
+    n = 0
+    for s in list(spec.get("secties", [])) + list(spec.get("bijlagen", [])):
+        for b in s.get("blokken", []):
+            if isinstance(b, dict) and b.get("type") == "subkop" and b.get("niveau", 1) == 1:
+                n += 1
+    n += len({(b.get("soort") or "overig").lower() for b in spec.get("bronnen", [])}) if spec.get("bronnen") else 0
+    return n
+
+
+def bouw_story(spec, F, S, bouwer, toc_niveaus=2):
     sp = spec
     story = [NextPageTemplate("normaal"), PageBreak()]
     # Inhoud + colofon
     story += [Kaderlabel("Inhoud", bouwer.F["sans_sb"], K["oker"]), Paragraph("Inhoudsopgave", S["kop1"])]
     toc = TableOfContents()
-    toc.levelStyles = [S["toc0"], S["toc1"]]
+    toc.levelStyles = [S["toc0"], S["toc1"]][:toc_niveaus]
     toc.dotsMinLevel = 99
     story += [toc, Spacer(1, 14)]
     story += bouwer.colofon()
@@ -767,7 +783,9 @@ def maak_rapport(spec, pad="rapport.pdf", assets_dir=None, download=True):
     spec.setdefault("datum", datetime.date.today().isoformat())
     bouwer = Bouwer(spec, F, S)
     doc = RapportDoc(str(pad), spec, F, S, assets_dir)
-    story = bouw_story(spec, F, S, bouwer)
+    # Inhoudsopgave met paragrafen zolang dat op pagina 2 past (circa 14 regels); anders alleen hoofdstukken.
+    doc.toc_niveaus = int(spec.get("inhoud_niveaus") or (2 if tel_paragrafen(spec) <= 14 else 1))
+    story = bouw_story(spec, F, S, bouwer, doc.toc_niveaus)
     GenummerdCanvas.teken_voet = staticmethod(doc.teken_voet)
     doc.multiBuild(story, canvasmaker=GenummerdCanvas)
     waarsch = list(bouwer.waarschuwingen)
