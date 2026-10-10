@@ -38,9 +38,24 @@ gevolgd door `/plugin install lawbot-pro@litic`. Typ daarna `/mcp`, kies `lawbot
 ## Commando's
 
 `W:` wetten · `J:` jurisprudentie · `S:` uitspraakanalyse · `R:` rechterprofiel ·
-`G:` webzoeken · `URL:` pagina ophalen · `V5:` interview — plus documentanalyse en het
-opstellen van stukken in gewone taal. Alle oude Custom GPT-commando's blijven werken;
-zie [MIGRATIE.md](MIGRATIE.md).
+`G:` webzoeken · `URL:` pagina ophalen · `V5:` interview · `D:` deep research — plus
+documentanalyse en het opstellen van stukken in gewone taal. Alle oude Custom GPT-commando's
+blijven werken; zie [MIGRATIE.md](MIGRATIE.md).
+
+## Deep research (D:)
+
+`D:` gevolgd door een rechtsvraag start een diepteonderzoek in rondes: eerst de officiële bronnen,
+daarna het open web, met een korte intake, een onderzoeksplan ter goedkeuring en een rapport in
+een van tien vormen (onderzoeksmemo, adviesnotitie, bronnenoverzicht, wetenschappelijk onderzoek,
+processtuk-onderbouwing, cliëntbrief, rechtspraakkaart, tegenlezing, monitorrapport,
+dossiernotitie). Elke bron draagt een verificatiestatus en de zoeklog zit als bijlage bij het
+rapport. Het rapport komt standaard als PDF in de LawBot Pro-huisstijl in je werkmap, met een
+waarmerk; Word of Markdown op verzoek.
+
+Het onderzoek werkt het best in Cowork (daar rendert Claude de PDF zelf). De uitgebreide
+webrondes (meerdere zoekdiensten tegelijk, pagina's gelezen inclusief PDF's) staan per licentie
+aan; vraag dat aan via support@litic.ai. Zonder die instelling doet de plugin dezelfde rondes in
+een basismodus met één zoekdienst en zegt dat erbij.
 
 ## Privacy
 
